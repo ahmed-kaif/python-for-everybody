@@ -23,3 +23,4 @@ for word, count in counts.items():
         bigWord = word
         bigCount = count
 print(bigWord, bigCount)
+print(max(counts.values()))
