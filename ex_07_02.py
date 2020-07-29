@@ -9,10 +9,11 @@ for line in fh:
     if line.startswith("X-DSPAM-Confidence:"):
         line = line.rstrip()
         spcpos = line.find(' ')
-        line = line[ spcpos+1 : len(line) ]
+        line = line[spcpos+1: len(line)]
         val = val + float(line)
         count = count + 1
-    if not line.startswith("X-DSPAM-Confidence:") : continue
+    if not line.startswith("X-DSPAM-Confidence:"):
+        continue
 
 avg = val / count
 print('Average spam confidence:', avg)

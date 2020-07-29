@@ -7,8 +7,10 @@ for line in fh:
     line = line.rstrip()
     line = line.split()
     for word in line:
-        if word not in lst: lst.append(word)
-        else : continue
+        if word not in lst:
+            lst.append(word)
+        else:
+            continue
 
 lst.sort()
 print(lst)
